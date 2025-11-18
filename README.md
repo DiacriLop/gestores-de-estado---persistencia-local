@@ -86,8 +86,10 @@ lib/
    - Verifica que los cambios se reflejen en otros dispositivos conectados
 
 ## 📱 Capturas de Pantalla
+![Demo](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDRzMGpnZ3kxY3d2OXBzdHB3M2JpcGZoZmduOGFlMG0wdHAwMm1vMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/13iBfn0zxbqh8Wi1Wf/giphy.gif)
+![Demo de la app](https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHNjMHN1Z2Rsd2FxYmxsbDFuNjZpNzZpcnMxb2o3MWxxcmh6bjFnciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/bgTnm0RgCKFpWMTzWP/giphy.gif)
 
-*(Incluye aquí capturas de pantalla o GIFs de tu aplicación en funcionamiento)*
+
 
 ## 🛠️ Generación de APK
 
@@ -103,7 +105,7 @@ El APK se generará en: `build/app/outputs/flutter-apk/app-release.apl`
 
 
 ## 📝 QR APP
-<img width="1125" height="1125" alt="qr-code" src="https://github.com/user-attachments/assets/8688fc9d-e247-40d8-abc9-f36e93fae817" />
+<img width="300" height="300" alt="qr-code" src="https://github.com/user-attachments/assets/8688fc9d-e247-40d8-abc9-f36e93fae817" />
 
 
 ## 📝 Notas Adicionales
