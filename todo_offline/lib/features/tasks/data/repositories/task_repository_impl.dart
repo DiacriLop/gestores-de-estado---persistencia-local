@@ -4,6 +4,7 @@ import 'package:todo_offline/features/tasks/domain/repositories/task_repository.
 
 class TaskRepositoryImpl implements TaskRepository {
   final TaskLocalDatasource _localDataSource;
+  String? _error;
 
   TaskRepositoryImpl({TaskLocalDatasource? localDataSource})
     : _localDataSource = localDataSource ?? TaskLocalDatasource();
@@ -13,7 +14,8 @@ class TaskRepositoryImpl implements TaskRepository {
     try {
       return await _localDataSource.getTasks();
     } on Exception catch (e) {
-      print('Error getting tasks: $e');
+      _error = 'Error getting tasks: $e';
+      print(_error);
       rethrow;
     }
   }
@@ -23,7 +25,8 @@ class TaskRepositoryImpl implements TaskRepository {
     try {
       await _localDataSource.insertTask(task);
     } on Exception catch (e) {
-      print('Error inserting task: $e');
+      _error = 'Error inserting task: $e';
+      print(_error);
       rethrow;
     }
   }
@@ -33,18 +36,25 @@ class TaskRepositoryImpl implements TaskRepository {
     try {
       await _localDataSource.updateTask(task);
     } on Exception catch (e) {
-      print('Error updating task: $e');
+      _error = 'Error updating task: $e';
+      print(_error);
       rethrow;
     }
   }
 
   @override
-  Future<void> deleteTask(int id) async {
+  Future<void> deleteTask(String id) async {
     try {
       await _localDataSource.deleteTask(id);
     } on Exception catch (e) {
-      print('Error deleting task: $e');
+      _error = 'Error deleting task: $e';
+      print(_error);
       rethrow;
     }
+  }
+
+  @override
+  void clearError() {
+    _error = null;
   }
 }
